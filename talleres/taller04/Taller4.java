@@ -17,13 +17,14 @@ public class Taller4 {
             return array[n];
         }
         else{
-            return array[n] + AuxArraySum(array,n-1);
+            return array[n] + AuxArraySum(array,n-1); // T(n)=c2*n + c1
         }
     }
 
     // ejercicio 2
     public static boolean SumGrupo(int Inicio, int[] nums, int target) {
         if (Inicio >= nums.length) return target == 0;
-        return SumGrupo(Inicio + 1, nums, target - nums[Inicio]) || SumGrupo(Inicio + 1, nums, target);
+        return SumGrupo(Inicio + 1, nums, target - nums[Inicio]) || SumGrupo(Inicio + 1, nums, target); 
+        // T(n)=c1 2^(n - 1) + c2 (2^n - 1)
     }
 }
