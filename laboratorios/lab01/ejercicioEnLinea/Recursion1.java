@@ -13,11 +13,8 @@ public int bunnyEars2(int conejos) {
 
 //triangle 
 public int triangle(int lineas) {
-  if(lineas==0){
-    return 0;
-  }
-  if(lineas==1){
-    return 1;
+  if(lineas<=1){
+    return lineas;
   }else{
     return lineas +triangle(lineas-1);
   }
