@@ -1,6 +1,6 @@
 //groupSum6 
 public boolean groupSum6(int Inicio, int[] nums, int objetivo) {
-  if (Inicio>=nums.length) {
+  if (Inicio==nums.length) {
     return objetivo==0;
   }
   if(nums[Inicio]!=6 && groupSum6(Inicio+1, nums, objetivo) 
